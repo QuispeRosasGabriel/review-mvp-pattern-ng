@@ -1,0 +1,20 @@
+<div *ngIf="clientInformation[0].gender === 'female';else maleGreeting">
+    hello lady
+</div>
+<ng-template #maleGreeting>
+    hello boy
+</ng-template>
+<div *ngFor="let client of clientInformation">
+    <div>
+        Information: {{client.name.first}} {{client.name.last}}
+    </div>
+    <div>
+        Gender: {{client.gender}}
+    </div>
+    <div>
+        Email: {{client.email}}
+    </div>
+    <button (click)="updateInformation()">
+        click to update your info
+    </button>
+</div>

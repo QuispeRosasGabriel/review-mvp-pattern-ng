@@ -1,0 +1,2 @@
+<app-client-profile *ngIf="clientInformation.length > 0"
+[clientInformation]="clientInformation" (updaterClientInfo)="listenClientInformation($event)" ></app-client-profile>
